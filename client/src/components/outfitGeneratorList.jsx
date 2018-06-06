@@ -7,9 +7,7 @@ const OutfitGeneratorList = (props) => (
     {
       props.outfits.map((outfit) => {
         return (
-          <div>
           <OutfitGeneratorListEntry outfit={outfit} />
-          </div>
         )
       })
     }  
