@@ -10,13 +10,14 @@ class OutfitGenerator extends React.Component {
     this.state = {
       style:"casual",
       currentProduct:null,
-      outfits:[]
+      outfits:[],
+      gender:'m'
     } 
     this.getProducts = this.getProducts.bind(this);
   }
   
-  getProducts(style) {
-    axios.get(`http://localhost:3003/style/` + style)
+  getProducts(gender, style) {
+    axios.get(`http://localhost:3003/gender/` + gender +/style/ + style)
     .then((res) => {
       this.setState({
         outfits: res.data
@@ -30,7 +31,7 @@ class OutfitGenerator extends React.Component {
   }
   
   componentDidMount() {
-    this.getProducts('casual');
+    this.getProducts(this.state.gender, this.state.style);
   }
   
   render() {

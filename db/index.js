@@ -21,8 +21,8 @@ connection.connect(err => {
 //   })
 // }
 
-let getAllProductsOfStyle = function(style, cb) {
-  connection.query(`SELECT * FROM products WHERE style LIKE ${style}`, (err, products) => {
+let getAllProductsOfStyle = function(gender, style, cb) {
+  connection.query(`SELECT * FROM products WHERE style LIKE ${style} && gender LIKE ${gender}`, (err, products) => {
     if(err) {
       cb(err, null);
       console.log(err);
