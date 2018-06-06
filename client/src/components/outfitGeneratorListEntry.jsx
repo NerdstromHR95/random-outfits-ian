@@ -1,7 +1,9 @@
 import React from 'react';
 
-function OutfitGeneratorListEntry(props) {
+const OutfitGeneratorListEntry = (props) => (
+
+    <img id="thumbnails" src={props.outfit.imgUrl} alt={props.outfit.title}/>
   
-}
+)
 
 export default OutfitGeneratorListEntry;

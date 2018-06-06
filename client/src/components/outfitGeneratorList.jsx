@@ -1,9 +1,17 @@
 import React from 'react';
-import outfitGeneratorListEntry from './outfitGeneratorListEntry.jsx';
+import OutfitGeneratorListEntry from './outfitGeneratorListEntry.jsx';
 
-function OutfitGeneratorList(props) {
-  
-}
-
+const OutfitGeneratorList = (props) => (
+  <div id="list">
+    <h3>{props.style}</h3>
+    {
+      props.outfits.map((outfit) => {
+        return (
+          <OutfitGeneratorListEntry outfit={outfit} />
+        )
+      })
+    }  
+  </div>
+)
 export default OutfitGeneratorList;
 
