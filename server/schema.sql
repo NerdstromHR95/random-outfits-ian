@@ -55,65 +55,65 @@ INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, star
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (10, "Interesting Belt", "Belt Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
 , 570, "casual", "belt", "m", 2, 13);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (11, "Slick Shirt", "supreme", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
-, 900, "business casual", "shirt", "m", 3, 12);
+, 900, "business_casual", "shirt", "m", 3, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (12, "Tuxedo Shirt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 140, "business casual", "shirt", "m", 2, 15);
+, 140, "business_casual", "shirt", "m", 2, 15);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (13, "Metallica Shirt", "Retro Shirt Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/piquepolo.jpg"
-, 160, "business casual", "shirt", "m", 5, 12);
+, 160, "business_casual", "shirt", "m", 5, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (14, "Plain Ol' Jeans", "Levi's", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/slimpants.jpg"
-, 175, "business casual", "pants", "m", 1, 1);
+, 175, "business_casual", "pants", "m", 1, 1);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (15, "Chaps", "Pants Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/floralpants.jpg"
-, 200, "business casual", "pants", "m", 3, 2);
+, 200, "business_casual", "pants", "m", 3, 2);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (16, "Maritime Watch", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownwatch.jpg"
-, 350, "business casual", "watch", "m", 5, 3);
+, 350, "business_casual", "watch", "m", 5, 3);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (17, "Quartz Watch", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/ceramicwatch.jpg"
-, 680, "business casual", "watch", "m", 2, 5);
+, 680, "business_casual", "watch", "m", 2, 5);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (18, "Karate Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
-, 195, "business casual", "belt", "m", 1, 100);
+, 195, "business_casual", "belt", "m", 1, 100);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (19, "Cowboy Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
-, 140, "business casual", "belt", "m", 2, 12);
+, 140, "business_casual", "belt", "m", 2, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (20, "USB cord (belt)", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 90, "business casual", "belt", "m", 3, 2);
+, 90, "business_casual", "belt", "m", 3, 2);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (21, "Stained T-shirt", "PRADA", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 130, "unemployed chic", "shirt", "m", 4, 10);
+, 130, "unemployed_chic", "shirt", "m", 4, 10);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (22, "Ripped T-shirt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
-, 160, "unemployed chic", "shirt", "m", 5, 122);
+, 160, "unemployed_chic", "shirt", "m", 5, 122);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (23, "Gucci Sweatpants", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/floralpants.jpg"
-, 180, "unemployed chic", "pants", "m", 1, 5);
+, 180, "unemployed_chic", "pants", "m", 1, 5);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (24, "LV B-Ball Shorts", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/slimpants.jpg"
-, 190, "unemployed chic", "pants", "m", 0, 0);
+, 190, "unemployed_chic", "pants", "m", 0, 0);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (25, "CK Boxer Briefs", "Calvin Klein", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/greenpants.jpg"
-, 200, "unemployed chic", "pants", "m", 4, 30);
+, 200, "unemployed_chic", "pants", "m", 4, 30);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (26, "Chronograph Watch", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/ceramicwatch.jpg"
-, 210, "unemployed chic", "watch", "m", 1, 12);
+, 210, "unemployed_chic", "watch", "m", 1, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (27, "Broken Watch", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/bluewatch.jpg"
-, 190, "unemployed chic", "watch", "m", 3, 13);
+, 190, "unemployed_chic", "watch", "m", 3, 13);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (28, "Kimono Belt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
-, 180, "unemployed chic", "belt", "m", 5, 12);
+, 180, "unemployed_chic", "belt", "m", 5, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (29, "Small Woven Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 280, "unemployed chic", "belt", "m", 3, 1);
+, 280, "unemployed_chic", "belt", "m", 3, 1);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (30, "Large Buckle Belt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
-, 190, "unemployed chic", "belt", "m", 1, 6);
+, 190, "unemployed_chic", "belt", "m", 1, 6);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (31, "V-Neck T-shirt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 200, "hipster formal", "shirt", "m", 3, 15);
+, 200, "hipster_formal", "shirt", "m", 3, 15);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (32, "Shirtless Vest", "Calvin Klein", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
-, 300, "hipster formal", "shirt", "m", 1, 20);
+, 300, "hipster_formal", "shirt", "m", 1, 20);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (33, "Frilly Long Shirt", "PRADA", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/piquepolo.jpg"
-, 400, "hipster formal", "shirt", "m", 2, 33);
+, 400, "hipster_formal", "shirt", "m", 2, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (34, "Skinny Jeans", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/slimpants.jpg"
-, 500, "hipster formal", "pants", "m", 3, 35);
+, 500, "hipster_formal", "pants", "m", 3, 35);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (35, "Cargo Shorts", "Cargo Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/floralpants.jpg"
-, 300, "hipster formal", "pants", "m", 1, 51);
+, 300, "hipster_formal", "pants", "m", 1, 51);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (36, "Analog Watch", "Rolex", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/smartwatch.jpg"
-, 200, "hipster formal", "watch", "m", 4, 22);
+, 200, "hipster_formal", "watch", "m", 4, 22);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (37, "Watch Tattoo", "Rolex", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/bluewatch.jpg"
-, 310, "hipster formal", "watch", "m", 3, 60);
+, 310, "hipster_formal", "watch", "m", 3, 60);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (38, "All-Stars", "Chuck Taylor", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/cowboyboot.jpg"
-, 400, "hipster formal", "shoes", "m", 2, 73);
+, 400, "hipster_formal", "shoes", "m", 2, 73);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (39, "Recycled Cardboard Belt", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 410, "hipster formal", "belt", "m", 1, 74);
+, 410, "hipster_formal", "belt", "m", 1, 74);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (40, "Bullfighter Belt", "Cool Belt Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
-, 180, "hipster formal", "belt", "m", 1, 90);
+, 180, "hipster_formal", "belt", "m", 1, 90);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (41, "Long-Sleeve Stretchy Shirt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
 , 190, "athleisure", "shirt", "m", 0, 0);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (42, "Stretchy Shirt", "UnderArmor", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
@@ -155,45 +155,45 @@ INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, star
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (60, "Vintage Boyfriend Belt", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
 , 190, "casual", "belt", "f", 2, 65);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (61, "Vintage Apron", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 120, "hipster formal", "shirt", "f", 5, 19);
+, 120, "hipster_formal", "shirt", "f", 5, 19);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (62, "Mike Tyson Sweater", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/piquepolo.jpg"
-, 130, "hipster formal", "shirt", "f", 5, 3);
+, 130, "hipster_formal", "shirt", "f", 5, 3);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (63, "JNCO Jeans", "JNCO", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/slimpants.jpg"
-, 140, "hipster formal", "pants", "f", 1, 540);
+, 140, "hipster_formal", "pants", "f", 1, 540);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (64, "Wide Belt", "Wide Belt Co.", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 115, "hipster formal", "belt", "f", 3, 91);
+, 115, "hipster_formal", "belt", "f", 3, 91);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (65, "Just For Looks Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
-, 170, "hipster formal", "belt", "f", 4, 33);
+, 170, "hipster_formal", "belt", "f", 4, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (66, "Gucci Clogs", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/manboot.jpg"
-, 190, "hipster formal", "shoes", "f", 2, 39);
+, 190, "hipster_formal", "shoes", "f", 2, 39);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (67, "All-Stars", "Chuck Taylor", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownboot.jpg"
-, 150, "hipster formal", "shoes", "f", 3, 20);
+, 150, "hipster_formal", "shoes", "f", 3, 20);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (68, "Drawn-On Vans", "Vans", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/cowboyboot.jpg"
-, 155, "hipster formal", "shoes", "f", 1, 19);
+, 155, "hipster_formal", "shoes", "f", 1, 19);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (69, "Wind-up Watch", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/smartwatch.jpg"
-, 350, "hipster formal", "watch", "f", 2, 25);
+, 350, "hipster_formal", "watch", "f", 2, 25);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (70, "Copper Watch", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownwatch.jpg"
-, 360, "hipster formal", "watch", "f", 3, 33);
+, 360, "hipster_formal", "watch", "f", 3, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (71, "Boyfriend's Shirt", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 375, "unemployed chic", "shirt", "f", 1, 45);
+, 375, "unemployed_chic", "shirt", "f", 1, 45);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (72, "Boyfriend's Jersey", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
-, 190, "unemployed chic", "shirt", "f", 3, 33);
+, 190, "unemployed_chic", "shirt", "f", 3, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (73, "Gucci Sweatpants", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/slimpants.jpg"
-, 280, "unemployed chic", "pants", "f", 5, 67);
+, 280, "unemployed_chic", "pants", "f", 5, 67);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (74, "Soccer Shorts", "PRADA", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/greenpants.jpg"
-, 135, "unemployed chic", "pants", "f", 3, 91);
+, 135, "unemployed_chic", "pants", "f", 3, 91);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (75, "Crocs", "Crocs", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/manboot.jpg"
-, 120, "unemployed chic", "shoes", "f", 4, 1);
+, 120, "unemployed_chic", "shoes", "f", 4, 1);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (76, "Comfy Slippers", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownboot.jpg"
-, 225, "unemployed chic", "shoes", "f", 3, 13);
+, 225, "unemployed_chic", "shoes", "f", 3, 13);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (77, "Boyfriend's Flip-Flops", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/cowboyboot.jpg"
-, 130, "unemployed chic", "shoes", "f", 3, 16);
+, 130, "unemployed_chic", "shoes", "f", 3, 16);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (78, "Databank", "CASIO", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/smartwatch.jpg"
-, 175, "unemployed chic", "watch", "f", 3, 55);
+, 175, "unemployed_chic", "watch", "f", 3, 55);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (79, "Apple Watch", "Apple", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/bluewatch.jpg"
-, 130, "unemployed chic", "watch", "f", 2, 92);
+, 130, "unemployed_chic", "watch", "f", 2, 92);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (80, "Boyfriend's Karate Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 145, "unemployed chic", "belt", "f", 1, 33);
+, 145, "unemployed_chic", "belt", "f", 1, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (81, "Neon Shirt", "lululemon", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
 , 190, "athleisure", "shirt", "f", 2, 22);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (82, "Diamond Studded Sports Bra", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
@@ -215,27 +215,27 @@ INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, star
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (90, "Gym Bag Strap", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
 , 120, "athleisure", "belt", "f", 5, 56);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (91, "Casual Blouse", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
-, 150, "business casual", "shirt", "f", 3, 77);
+, 150, "business_casual", "shirt", "f", 3, 77);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (92, "Orange Moo-Moo", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/piquepolo.jpg"
-, 250, "business casual", "shirt", "f", 2, 92);
+, 250, "business_casual", "shirt", "f", 2, 92);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (93, "Long Skirt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/greenpants.jpg"
-, 415, "business casual", "pants", "f", 1, 13);
+, 415, "business_casual", "pants", "f", 1, 13);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (94, "Long Pants", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/floralpants.jpg"
-, 995, "business casual", "pants", "f", 0, 0);
+, 995, "business_casual", "pants", "f", 0, 0);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (95, "Fancy Shoes", "Louis Vuitton", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownboot.jpg"
-, 215, "business casual", "shoes", "f", 2, 1);
+, 215, "business_casual", "shoes", "f", 2, 1);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (96, "Fancier Shoes", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/cowboyboot.jpg"
-, 225, "business casual", "shoes", "f", 3, 3);
+, 225, "business_casual", "shoes", "f", 3, 3);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (97, "Diamond Watch", "Rolex", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownwatch.jpg"
-, 945, "business casual", "watch", "f", 4, 6);
+, 945, "business_casual", "watch", "f", 4, 6);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (98, "Recycled Sea-Glass Watch", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/smartwatch.jpg"
-, 290, "business casual", "watch", "f", 1, 12);
+, 290, "business_casual", "watch", "f", 1, 12);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (99, "Boring Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
-, 235, "business casual", "belt", "f", 3, 150);
+, 235, "business_casual", "belt", "f", 3, 150);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (100, "Shiny Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
-, 280, "business casual", "belt", "f", 2, 99);
+, 280, "business_casual", "belt", "f", 2, 99);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (101, "Lame Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
-, 175, "business casual", "belt", "f", 1, 12);
+, 175, "business_casual", "belt", "f", 1, 12);
 
 INSERT INTO colors (id, name) VALUES (1, "black");
 INSERT INTO colors (id, name) VALUES (2, "white");
