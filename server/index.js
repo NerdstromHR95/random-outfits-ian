@@ -9,19 +9,13 @@ const PORT = 3003;
 // app.use(bodyParser.urlencoded({extended: true}));
 
 
-<<<<<<< HEAD
+
 app.get(`/gender/:gender/style/:style`, function(req, res) {
   const genderName = JSON.stringify(req.params.gender);
   const styleName = JSON.stringify(req.params.style);
   console.log(styleName);
   console.log(genderName);
   db.getAllProductsOfStyle(genderName, styleName, (err, products) => {
-=======
-app.get(`/style/:style`, function(req, res) {
-  const styleName = JSON.stringify(req.params.style);
-  console.log(styleName);
-  db.getAllProductsOfStyle(styleName, (err, products) => {
->>>>>>> 96767a2210b4400bebd69921ec5406de97d62e07
     if (err) {
       res.status(500);
       res.send();
