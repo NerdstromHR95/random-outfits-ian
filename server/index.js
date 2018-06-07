@@ -1,0 +1,52 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const db = require('../db/index.js');
+
+const app = express();
+const PORT = 3003;
+
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
+
+
+<<<<<<< HEAD
+app.get(`/gender/:gender/style/:style`, function(req, res) {
+  const genderName = JSON.stringify(req.params.gender);
+  const styleName = JSON.stringify(req.params.style);
+  console.log(styleName);
+  console.log(genderName);
+  db.getAllProductsOfStyle(genderName, styleName, (err, products) => {
+=======
+app.get(`/style/:style`, function(req, res) {
+  const styleName = JSON.stringify(req.params.style);
+  console.log(styleName);
+  db.getAllProductsOfStyle(styleName, (err, products) => {
+>>>>>>> 96767a2210b4400bebd69921ec5406de97d62e07
+    if (err) {
+      res.status(500);
+      res.send();
+    } else {
+      console.log(products);
+      res.status(200).send(products);
+
+      // res.send(products);
+    }
+  })
+})
+
+
+// app.get(`/:productId`, function(req, res) {
+//   db.getProductInfo(productId, (err, info) => {
+//     if (err) {
+//       res.status(500);
+//       res.end();
+//     } else {
+//       res.status(200);
+//       res.send(info);
+//     }
+//   })
+// });
+
+app.use(express.static(__dirname + '/../public/dist'));
+
+app.listen(3003);
