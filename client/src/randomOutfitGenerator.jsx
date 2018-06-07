@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import OutfitGeneratorList from './components/outfitGeneratorList.jsx';
+import BeltRotator from './components/beltRotator.jsx';
+import ShirtRotator from './components/shirtRotator.jsx';
+import PantsRotator from './components/pantsRotator.jsx';
+import ShoeRotator from './components/shoeRotator.jsx';
+import WatchRotator from './components/watchRotator.jsx';
 import axios from 'axios';
 
 class OutfitGenerator extends React.Component {
@@ -8,15 +13,20 @@ class OutfitGenerator extends React.Component {
     super(props);
     
     this.state = {
-      style:"casual",
+      style:"hipster_formal",
       currentProduct:null,
       outfits:[],
       gender:'m',
-      shirts:[],
-      shoes:[],
-      pants:[],
-      watches:[],
-      belts:[]
+      shirts:[{}],
+      shoes:[{}],
+      pants:[{}],
+      watches:[{}],
+      belts:[{}],
+      shirtIndex:0,
+      shoeIndex:0,
+      pantsIndex:0,
+      watchIndex:0,
+      beltIndex:0
     } 
     this.getProducts = this.getProducts.bind(this);
   }
@@ -68,7 +78,11 @@ class OutfitGenerator extends React.Component {
     return(
       <div>
         <h1>Item shuffler (react rendering)</h1>
-        <OutfitGeneratorList outfits={this.state.outfits} style={this.state.style}/>
+        <BeltRotator belts={this.state.belts} beltIndex={this.state.beltIndex}/>
+        <ShirtRotator shirts={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
+        <PantsRotator pants={this.state.pants} pantsIndex={this.state.pantsIndex}/>
+        <ShoeRotator shoes={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
+        <WatchRotator watches={this.state.watches} watchIndex={this.state.watchIndex}/>
       </div>
       
       
