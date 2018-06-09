@@ -1,6 +1,24 @@
+
+
 #thumbnails {
   height: 150px;
   width: 100px;
   display:inline-block;
 
+}
+div.shuffler {
+  width: 50px;
+  height: 50px;
+  display:inline-block;
+}
+.fa-random {
+  padding-left: 20px;
+  font-size: 1em;
+}
+div.navbar {
+  width: 100%;
+  display:inline-block;
+}
+div.rotator {
+  display:inline-block;
 }

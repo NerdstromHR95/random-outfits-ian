@@ -2,7 +2,11 @@ import React from 'react';
 
 const ShoeRotator = (props) => (
   <div>
-  { props.shoes.length === 1 ? (
+  { props.shoes.length < 1 ? (
+    <div>
+    </div>
+    ) : (
+    props.shoes.length === 1 ? (
       <div id="list">
         <img id="thumbnails" src={props.shoes[0].imgUrl} alt={props.shoes[0].title} />
       </div>
@@ -10,7 +14,8 @@ const ShoeRotator = (props) => (
       <div id="list">          
         <img id="thumbnails" src={props.shoes[props.shoeIndex].imgUrl} alt={props.shoes[props.shoeIndex].title}/>
       </div>
-  )}
+  )
+)}
   </div>
 )
   
