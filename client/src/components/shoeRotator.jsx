@@ -1,18 +1,17 @@
 import React from 'react';
+import SimpleSlider from './slider.jsx'
 
 const ShoeRotator = (props) => (
   <div>
-  { props.shoes.length < 1 ? (
+  { props.outfits.length < 1 ? (
     <div>
     </div>
     ) : (
-    props.shoes.length === 1 ? (
-      <div id="list">
-        <img id="thumbnails" src={props.shoes[0].imgUrl} alt={props.shoes[0].title} />
-      </div>
+    props.outfits.length === 1 ? (
+        <img id="thumbnails" src={props.outfits[0].imgUrl} alt={props.outfits[0].title} />
   ) : (
-      <div id="list">          
-        <img id="thumbnails" src={props.shoes[props.shoeIndex].imgUrl} alt={props.shoes[props.shoeIndex].title}/>
+      <div>          
+       <SimpleSlider outfits={props.outfits}/>
       </div>
   )
 )}

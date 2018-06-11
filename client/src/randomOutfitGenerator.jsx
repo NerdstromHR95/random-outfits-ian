@@ -7,16 +7,17 @@ import PantsRotator from './components/pantsRotator.jsx';
 import ShoeRotator from './components/shoeRotator.jsx';
 import WatchRotator from './components/watchRotator.jsx';
 import axios from 'axios';
+import SimpleSlider from './components/slider.jsx';
 
 class OutfitGenerator extends React.Component {
   constructor(props) {
     super(props);
     
     this.state = {
-      style:"unemployed_chic",
+      style:"business_casual",
       currentProduct:null,
       outfits:[],
-      gender:'m',
+      gender:'f',
       shirts:[{}],
       shoes:[{}],
       pants:[{}],
@@ -97,27 +98,37 @@ class OutfitGenerator extends React.Component {
   
   
   render() {
+    let styleName;
+    if(this.state.style === "unemployed_chic") {
+      styleName = "Unemployed Chic";
+    } else if (this.state.style === "hipster_formal") {
+      styleName = "Hipster Formal";
+    } else if (this.state.style === "business_casual") {
+      styleName = "Business Casual";
+    } else if (this.state.style === "casual") {
+      styleName = "Casual";
+    } else if (this.state.style === "athleisure") {
+      styleName = "Athleisure"
+    }
+    
     return(
-      <div>
+      <div className="leftcomponent">
         <div className="navbar">
-          <h2>{this.state.style}
+          <h2>{styleName}
           <div className="shuffler" onClick={this.shuffler}>
             <i className="fas fa-random"></i>
           </div>
           </h2>
         </div>
         <div className="rotator">
-          <BeltRotator belts={this.state.belts} beltIndex={this.state.beltIndex}/>
-          <ShirtRotator shirts={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
-          <PantsRotator pants={this.state.pants} pantsIndex={this.state.pantsIndex}/>
-          <ShoeRotator shoes={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
-          <WatchRotator watches={this.state.watches} watchIndex={this.state.watchIndex}/>
+          <BeltRotator className="accessory" outfits={this.state.belts} beltIndex={this.state.beltIndex}/>
+          <ShirtRotator outfits={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
+          <PantsRotator outfits={this.state.pants} pantsIndex={this.state.pantsIndex}/>
+          <ShoeRotator className="accessory" outfits={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
+          <WatchRotator className="accessory" outfits={this.state.watches} watchIndex={this.state.watchIndex}/>
         </div>
       </div>
-      
-      
-      
-      )
+    )
   }
 }
 

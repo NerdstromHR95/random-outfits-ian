@@ -1,9 +1,9 @@
 
-
 #thumbnails {
   height: 150px;
   width: 100px;
   display:inline-block;
+  float:left;
 
 }
 div.shuffler {
@@ -21,4 +21,56 @@ div.navbar {
 }
 div.rotator {
   display:inline-block;
+  width:500px;
+  height:300px;
+  position: relative;
+}
+div.list {
+  display: inline-block;
+    width: 100px;
+
+}
+#list {
+  display:inline-block;
+}
+div.leftcomponent {
+  width:30%;
+  height:60%;
+}
+div.item {
+  float:left;
+  display: inline-block;
+  width: 100px;
+}
+div.pantslider {
+  width:100px;
+  float:left;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+div.pantslider:hover .slick-prev:before {
+  color:black !important;
+}
+
+div.pantslider:hover .slick-next:before {
+  color:black !important;
+}
+div.slick-slider {
+  float:left;
+  display: inline-block;
+}
+div.accessory {
+  position:relative;
+}
+div.slick-initialized {
+  display:inline-block;
+  float:left;
+}
+#pants {
+  height:300px !important;
+  width: 200px !important;
 }

@@ -1,17 +1,20 @@
 import React from 'react';
+import SimpleSlider from './slider.jsx';
 
 const WatchRotator = (props) => (
   <div>
-  { props.watches.length === 1 ? (
-      <div id="list">
-        <img id="thumbnails" src={props.watches[0].imgUrl} alt={props.watches[0].title} />
-      </div>
+  { props.outfits.length < 1 ? (
+    <div>
+    </div>
+    ) : (
+    props.outfits.length === 1 ? (
+        <img id="thumbnails" src={props.outfits[0].imgUrl} alt={props.outfits[0].title} />
   ) : (
-      <div id="list">          
-        <img id="thumbnails" src={props.watches[props.watchIndex].imgUrl} alt={props.watches[props.watchIndex].title}/>
+      <div>          
+       <SimpleSlider outfits={props.outfits}/>
       </div>
-  )}
+  )
+)}
   </div>
 )
-  
 export default WatchRotator;
