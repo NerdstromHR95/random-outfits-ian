@@ -102,7 +102,7 @@ class OutfitGenerator extends React.Component {
   render() {
     let styleName;
     if(this.state.style === "unemployed_chic") {
-      styleName = "Unemployed Chic";
+      styleName = "Derelique";
     } else if (this.state.style === "hipster_formal") {
       styleName = "Hipster Formal";
     } else if (this.state.style === "business_casual") {
@@ -112,15 +112,39 @@ class OutfitGenerator extends React.Component {
     } else if (this.state.style === "athleisure") {
       styleName = "Athleisure"
     }
+    let styleAuthor;
+    let styleDescription;
+    if(this.state.style === "unemployed_chic") {
+      styleAuthor = "by Aaron Tesfai";
+      styleDescription = "A step beyond hipster style moving towards a vagabond/homeless look.";
+    } else if (this.state.style === "hipster_formal") {
+      styleAuthor = "by Dan Olson"
+      styleDescription = "Because suits are too mainstream.";
+    } else if (this.state.style === "business_casual") {
+      styleAuthor = "by Jehwa Shin"
+      styleDescription = "To show your coworkers that you aren't that boring.";
+    } else if (this.state.style === "casual") {
+      styleAuthor = "by Patricia Shirazi"
+      styleDescription = "Staying cool when you look so hot.";
+    } else if (this.state.style === "athleisure") {
+      styleAuthor = "by Ian McKinney"
+      styleDescription = "For anything from hitting the gym to hitting the Netflix.";
+    }
+    
     
     return(
       <div className="leftcomponent">
         <div className="navbar">
           <h2>{styleName}
-          <div className="shuffler" onClick={this.shuffler}>
+            <div className="shuffler" onClick={this.shuffler}>
             <i className="fas fa-random"></i>
-          </div>
+            </div>
           </h2>
+          <h4 style={{fontSize:"13", fontStyle:"lato", fontWeight:"normal"}}>{styleAuthor}</h4>
+          <h5 style={{fontSize:"8", fontStyle:"lato", fontWeight:"normal"}}>{styleDescription}</h5>
+         
+            
+          
         </div>
         <div className="rotator">
           <BeltRotator className="accessory" outfits={this.state.belts} beltIndex={this.state.beltIndex}/>
