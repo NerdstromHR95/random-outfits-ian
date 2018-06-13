@@ -28,7 +28,7 @@ class OutfitGenerator extends React.Component {
       pantsIndex:0,
       watchIndex:0,
       beltIndex:0,
-      styleList:["casual","unemployed_chic","business_casual","athleisure"]
+      styleList:["casual","unemployed_chic","business_casual","athleisure","hipster_formal"]
     } 
     this.getProducts = this.getProducts.bind(this);
     this.shuffler = this.shuffler.bind(this);
@@ -36,7 +36,7 @@ class OutfitGenerator extends React.Component {
   }     
   
   getProducts(gender, style) {
-    axios.get(`http://localhost:3003/gender/` + gender +/style/ + style)
+    axios.get(`http://localhost:3003/random/gender/` + gender +/style/ + style)
     .then((res) => {
 
       this.setState({
@@ -57,7 +57,7 @@ class OutfitGenerator extends React.Component {
   
   getProduct() {
     let productId = window.location.pathname.split('/')[1];
-    axios.get(`http://localhost:3003/products/` + productId)
+    axios.get(`http://localhost:3003/random/products/` + productId)
       .then((res) => {
         console.log(res.data, 'data from axios');
         this.setState({
