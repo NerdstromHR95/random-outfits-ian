@@ -141,10 +141,7 @@ class OutfitGenerator extends React.Component {
             </div>
           </h2>
           <h4 style={{fontSize:"13", fontStyle:"lato", fontWeight:"normal"}}>{styleAuthor}</h4>
-          <h5 style={{fontSize:"8", fontStyle:"lato", fontWeight:"normal"}}>{styleDescription}</h5>
-         
-            
-          
+          <h5 style={{fontSize:"8", fontStyle:"lato", fontWeight:"normal"}}>{styleDescription}</h5> 
         </div>
         <div className="rotator">
           <BeltRotator className="accessory" outfits={this.state.belts} beltIndex={this.state.beltIndex}/>
