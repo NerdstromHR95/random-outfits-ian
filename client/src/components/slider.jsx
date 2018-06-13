@@ -27,6 +27,7 @@ class SimpleSlider extends React.Component {
           return (
           <div>
             <img src={outfit.imgUrl} style={{width: '100px', height: '175px'}} /> 
+            <h3>${outfit.price}.00</h3>
           </div>
           )
           })

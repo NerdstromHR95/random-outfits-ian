@@ -13,14 +13,11 @@ const PORT = 3003;
 app.get(`/gender/:gender/style/:style`, function(req, res) {
   const genderName = JSON.stringify(req.params.gender);
   const styleName = JSON.stringify(req.params.style);
-  console.log(styleName);
-  console.log(genderName);
   db.getAllProductsOfStyle(genderName, styleName, (err, products) => {
     if (err) {
-      res.status(500);
+      res.status(500)
       res.send();
     } else {
-      console.log(products);
       res.status(200).send(products);
 
       // res.send(products);
@@ -29,18 +26,19 @@ app.get(`/gender/:gender/style/:style`, function(req, res) {
 })
 
 
-// app.get(`/:productId`, function(req, res) {
-//   db.getProductInfo(productId, (err, info) => {
-//     if (err) {
-//       res.status(500);
-//       res.end();
-//     } else {
-//       res.status(200);
-//       res.send(info);
-//     }
-//   })
-// });
+app.get(`/products/:productId`, function(req, res) {
+  const productId = req.params.productId;
+  db.getProductInfo(productId, (err, info) => {
+    if (err) {
+      res.status(500);
+      res.end();
+    } else {
+      res.status(200);
+      res.send(info);
+    }
+  })
+});
 
-app.use(express.static(__dirname + '/../public/dist'));
+app.use('/:productId', express.static(__dirname + '/../public/dist'));
 
 app.listen(3003);

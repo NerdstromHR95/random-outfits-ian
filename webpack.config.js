@@ -5,7 +5,7 @@ var dist = path.join(__dirname, '/public/dist');
 module.exports = {
   entry: `${src}/randomOutfitGenerator.jsx`,
   output: {
-    filename: 'bundle.js',
+    filename: 'outfitsbundle.js',
     path: dist
   },
   module: {

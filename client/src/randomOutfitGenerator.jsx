@@ -28,31 +28,12 @@ class OutfitGenerator extends React.Component {
       pantsIndex:0,
       watchIndex:0,
       beltIndex:0,
-      styleList:["casual","hipster_formal","unemployed_chic","business_casual","athleisure"]
+      styleList:["casual","unemployed_chic","business_casual","athleisure"]
     } 
     this.getProducts = this.getProducts.bind(this);
     this.shuffler = this.shuffler.bind(this);
+    this.getProduct = this.getProduct.bind(this);
   }     
-
-  // sortProducts(data) {
-  //   data.forEach(function(outfit) {
-  //     if(outfit.type === "pants") {
-  //       this.state.pants.push(outfit);
-  //     }
-  //     if(outfit.type === "shirt") {
-  //       this.state.shirts.push(outfit);
-  //     }
-  //     if(outfit.type === "shoes") {
-  //       this.state.shoes.push(outfit);
-  //     }
-  //     if(outfit.type === "belt") {
-  //       this.state.belts.push(outfit);
-  //     }
-  //     else {styleList
-  //       this.state.watches.push(outfit);
-  //     }
-  //   })
-  // }
   
   getProducts(gender, style) {
     axios.get(`http://localhost:3003/gender/` + gender +/style/ + style)
@@ -74,6 +55,27 @@ class OutfitGenerator extends React.Component {
     })
   }
   
+  getProduct() {
+    let productId = window.location.pathname.split('/')[1];
+    axios.get(`http://localhost:3003/products/` + productId)
+      .then((res) => {
+        console.log(res.data, 'data from axios');
+        this.setState({
+          currentProduct: res.data[0].name,
+          style: res.data[0].style,
+          gender: res.data[0].gender
+        }, function () {
+          console.log(this.state.gender, this.state.style)
+          
+          this.getProducts(this.state.gender, this.state.style);
+        })
+      })
+      .catch(function(err) {
+        console.log(err);
+        console.log('there is an error on single product get')
+      })
+  }
+  
   getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -93,7 +95,7 @@ class OutfitGenerator extends React.Component {
   }
   
   componentDidMount() {
-    this.getProducts(this.state.gender, this.state.style);
+    this.getProduct()
   }
   
   
@@ -132,5 +134,5 @@ class OutfitGenerator extends React.Component {
   }
 }
 
-ReactDOM.render(<OutfitGenerator />, document.getElementById('app'));
+ReactDOM.render(<OutfitGenerator />, document.getElementById('outfit'));
 
