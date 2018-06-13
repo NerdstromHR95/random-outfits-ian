@@ -19,6 +19,7 @@ const PantsRotator = (props) => (
       </div>
   )
 )}
+
   </div>
 )
   
