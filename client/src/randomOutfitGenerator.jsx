@@ -59,14 +59,11 @@ class OutfitGenerator extends React.Component {
     let productId = window.location.pathname.split('/')[1];
     axios.get(`http://localhost:3003/random/products/` + productId)
       .then((res) => {
-        console.log(res.data, 'data from axios');
         this.setState({
           currentProduct: res.data[0].name,
           style: res.data[0].style,
           gender: res.data[0].gender
-        }, function () {
-          console.log(this.state.gender, this.state.style)
-          
+        }, function () {          
           this.getProducts(this.state.gender, this.state.style);
         })
       })
