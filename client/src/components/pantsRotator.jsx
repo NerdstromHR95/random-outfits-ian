@@ -1,16 +1,25 @@
 import React from 'react';
+import SimpleSlider from './slider.jsx';
+
 
 const PantsRotator = (props) => (
   <div>
-  {props.pants.length === 1 ? (
-      <div id="list">
-        <img src={props.pants[0].imgUrl} alt={props.pants[0].title} />
-      </div>
+  { props.outfits.length < 1 ? (
+    <div>
+    </div>
+    ) : (
+    props.outfits.length === 1 ? (
+        <div className="pantslider">
+          <img id="thumbnails" src={props.outfits[0].imgUrl} alt={props.outfits[0].title} />
+          <h3  style={{textAlign:"center"}}>${props.outfits[0].price}.00</h3>
+        </div>
   ) : (
-      <div id="list">          
-        <img id="thumbnails" src={props.pants[props.pantsIndex].imgUrl} alt={props.pants[props.pantsIndex].title}/>
+      <div>          
+       <SimpleSlider id="pants" outfits={props.outfits}/>
       </div>
-  )}
+  )
+)}
+
   </div>
 )
   

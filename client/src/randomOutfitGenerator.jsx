@@ -7,16 +7,17 @@ import PantsRotator from './components/pantsRotator.jsx';
 import ShoeRotator from './components/shoeRotator.jsx';
 import WatchRotator from './components/watchRotator.jsx';
 import axios from 'axios';
+import SimpleSlider from './components/slider.jsx';
 
 class OutfitGenerator extends React.Component {
   constructor(props) {
     super(props);
     
     this.state = {
-      style:"hipster_formal",
+      style:"business_casual",
       currentProduct:null,
       outfits:[],
-      gender:'m',
+      gender:'f',
       shirts:[{}],
       shoes:[{}],
       pants:[{}],
@@ -26,29 +27,13 @@ class OutfitGenerator extends React.Component {
       shoeIndex:0,
       pantsIndex:0,
       watchIndex:0,
-      beltIndex:0
+      beltIndex:0,
+      styleList:["casual","unemployed_chic","business_casual","athleisure"]
     } 
     this.getProducts = this.getProducts.bind(this);
-  }
-  // sortProducts(data) {
-  //   data.forEach(function(outfit) {
-  //     if(outfit.type === "pants") {
-  //       this.state.pants.push(outfit);
-  //     }
-  //     if(outfit.type === "shirt") {
-  //       this.state.shirts.push(outfit);
-  //     }
-  //     if(outfit.type === "shoes") {
-  //       this.state.shoes.push(outfit);
-  //     }
-  //     if(outfit.type === "belt") {
-  //       this.state.belts.push(outfit);
-  //     }
-  //     else {
-  //       this.state.watches.push(outfit);
-  //     }
-  //   })
-  // }
+    this.shuffler = this.shuffler.bind(this);
+    this.getProduct = this.getProduct.bind(this);
+  }     
   
   getProducts(gender, style) {
     axios.get(`http://localhost:3003/gender/` + gender +/style/ + style)
@@ -70,26 +55,84 @@ class OutfitGenerator extends React.Component {
     })
   }
   
-  componentDidMount() {
-    this.getProducts(this.state.gender, this.state.style);
+  getProduct() {
+    let productId = window.location.pathname.split('/')[1];
+    axios.get(`http://localhost:3003/products/` + productId)
+      .then((res) => {
+        console.log(res.data, 'data from axios');
+        this.setState({
+          currentProduct: res.data[0].name,
+          style: res.data[0].style,
+          gender: res.data[0].gender
+        }, function () {
+          console.log(this.state.gender, this.state.style)
+          
+          this.getProducts(this.state.gender, this.state.style);
+        })
+      })
+      .catch(function(err) {
+        console.log(err);
+        console.log('there is an error on single product get')
+      })
   }
   
+  getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  shuffler() {
+    let currentStyleIndex = this.state.styleList.indexOf(this.state.style);
+    let potentialStyleList = [];
+    potentialStyleList = potentialStyleList.concat(this.state.styleList);
+    potentialStyleList.splice(currentStyleIndex,1);
+    this.setState({
+      style: potentialStyleList[this.getRandomIntInclusive(0,potentialStyleList.length-1)]
+    }, () => {
+      this.getProducts(this.state.gender, this.state.style);
+    })
+  }
+  
+  componentDidMount() {
+    this.getProduct()
+  }
+  
+  
   render() {
+    let styleName;
+    if(this.state.style === "unemployed_chic") {
+      styleName = "Unemployed Chic";
+    } else if (this.state.style === "hipster_formal") {
+      styleName = "Hipster Formal";
+    } else if (this.state.style === "business_casual") {
+      styleName = "Business Casual";
+    } else if (this.state.style === "casual") {
+      styleName = "Casual";
+    } else if (this.state.style === "athleisure") {
+      styleName = "Athleisure"
+    }
+    
     return(
-      <div>
-        <h1>Item shuffler (react rendering)</h1>
-        <BeltRotator belts={this.state.belts} beltIndex={this.state.beltIndex}/>
-        <ShirtRotator shirts={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
-        <PantsRotator pants={this.state.pants} pantsIndex={this.state.pantsIndex}/>
-        <ShoeRotator shoes={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
-        <WatchRotator watches={this.state.watches} watchIndex={this.state.watchIndex}/>
+      <div className="leftcomponent">
+        <div className="navbar">
+          <h2>{styleName}
+          <div className="shuffler" onClick={this.shuffler}>
+            <i className="fas fa-random"></i>
+          </div>
+          </h2>
+        </div>
+        <div className="rotator">
+          <BeltRotator className="accessory" outfits={this.state.belts} beltIndex={this.state.beltIndex}/>
+          <ShirtRotator outfits={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
+          <PantsRotator outfits={this.state.pants} pantsIndex={this.state.pantsIndex}/>
+          <ShoeRotator className="accessory" outfits={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
+          <WatchRotator className="accessory" outfits={this.state.watches} watchIndex={this.state.watchIndex}/>
+        </div>
       </div>
-      
-      
-      
-      )
+    )
   }
 }
 
-ReactDOM.render(<OutfitGenerator />, document.getElementById('app'));
+ReactDOM.render(<OutfitGenerator />, document.getElementById('outfit'));
 

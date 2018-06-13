@@ -11,15 +11,15 @@ connection.connect(err => {
   console.log('connected to db');
 });
 
-// let getProductInfo = function(productId, cb) {
-//   connection.query(`SELECT * FROM products WHERE id LIKE ${productId}`, (err, info) => {
-//     if (err) {
-//       cb(err, null);
-//     } else if (info !== null) {
-//       cb(null, info);
-//     }
-//   })
-// }
+let getProductInfo = function(productId, cb) {
+  connection.query(`SELECT * FROM products WHERE id LIKE ${productId}`, (err, info) => {
+    if (err) {
+      cb(err, null);
+    } else if (info !== null) {
+      cb(null, info);
+    }
+  })
+}
 
 let getAllProductsOfStyle = function(gender, style, cb) {
   connection.query(`SELECT * FROM products WHERE style LIKE ${style} && gender LIKE ${gender}`, (err, products) => {
@@ -34,5 +34,5 @@ let getAllProductsOfStyle = function(gender, style, cb) {
   
 }
 
-// module.exports.getProductInfo = getProductInfo;
+module.exports.getProductInfo = getProductInfo;
 module.exports.getAllProductsOfStyle = getAllProductsOfStyle;

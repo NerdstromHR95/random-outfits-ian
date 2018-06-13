@@ -93,7 +93,7 @@ INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, star
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (29, "Small Woven Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/leatherbelt.jpg"
 , 280, "unemployed_chic", "belt", "m", 3, 1);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (30, "Large Buckle Belt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/fancybelt.jpg"
-, 190, "unemployed_chic", "belt", "m", 1, 6);
+, 190, "unemployed_chic", "shoes", "m", 1, 6);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (31, "V-Neck T-shirt", "GUCCI", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/versaceshirt.jpg"
 , 200, "hipster_formal", "shirt", "m", 3, 15);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (32, "Shirtless Vest", "Calvin Klein", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/otherpolo.jpg"
