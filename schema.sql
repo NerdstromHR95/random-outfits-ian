@@ -165,7 +165,7 @@ INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, star
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (65, "Just For Looks Belt", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownbelt.jpg"
 , 170, "hipster_formal", "belt", "f", 4, 33);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (66, "Gucci Clogs", "BURBERRY", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/manboot.jpg"
-, 190, "hipster_formal", "shoes", "f", 2, 39);
+, 190, "hipster_formal", "pants", "f", 2, 39);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (67, "All-Stars", "Chuck Taylor", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/brownboot.jpg"
 , 150, "hipster_formal", "shoes", "f", 3, 20);
 INSERT INTO products (id, title, brand, imgUrl, price, style, type, gender, starCount, numReviews) VALUES (68, "Drawn-On Vans", "Vans", "https://s3-us-west-1.amazonaws.com/randomoutfitgenerator/Pictures/cowboyboot.jpg"

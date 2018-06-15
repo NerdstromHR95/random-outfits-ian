@@ -15,7 +15,7 @@ const PantsRotator = (props) => (
         </div>
   ) : (
       <div>          
-       <SimpleSlider id="pants" outfits={props.outfits}/>
+       <SimpleSlider outfits={props.outfits}/>
       </div>
   )
 )}
