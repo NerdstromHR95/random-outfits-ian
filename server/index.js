@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const db = require('../db/index.js');
 
 const app = express();
-const PORT = 3003;
+const PORT = 8081;
 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: true}));
@@ -40,4 +40,4 @@ app.get(`/random/products/:productId`, function(req, res) {
 
 app.use('/:productId', express.static(__dirname + '/../public/dist'));
 
-app.listen(3003);
+app.listen(8081);

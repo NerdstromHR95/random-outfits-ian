@@ -28,15 +28,18 @@ class OutfitGenerator extends React.Component {
       pantsIndex:0,
       watchIndex:0,
       beltIndex:0,
+      
       styleList:["casual","unemployed_chic","business_casual","athleisure","hipster_formal"]
     } 
     this.getProducts = this.getProducts.bind(this);
     this.shuffler = this.shuffler.bind(this);
     this.getProduct = this.getProduct.bind(this);
+    this.slideClickUp = this.slideClickUp.bind(this);
+    this.slideClickDown = this.slideClickDown.bind(this);
   }     
   
   getProducts(gender, style) {
-    axios.get(`http://localhost:3003/random/gender/` + gender +/style/ + style)
+    axios.get(`/random/gender/` + gender +/style/ + style)
     .then((res) => {
 
       this.setState({
@@ -57,7 +60,7 @@ class OutfitGenerator extends React.Component {
   
   getProduct() {
     let productId = window.location.pathname.split('/')[1];
-    axios.get(`http://localhost:3003/random/products/` + productId)
+    axios.get(`/random/products/` + productId)
       .then((res) => {
         this.setState({
           currentProduct: res.data[0].name,
@@ -71,6 +74,124 @@ class OutfitGenerator extends React.Component {
         console.log(err);
         console.log('there is an error on single product get')
       })
+  }
+  
+  slideClickUp(index, name) {
+    if(name === 1 ) {
+      if (index >= this.state.belts.length) {
+        this.setState {
+          beltIndex: 0
+        }
+      } else {
+        this.setState{
+          beltIndex : this.state.beltIndex + 1
+        }
+      }
+    }
+    if(name === 2 ) {
+      if (index >= this.state.shirts.length) {
+        this.setState {
+          shirtIndex: 0
+        }
+      } else {
+        this.setState{
+          shirtIndex : this.state.shirtIndex + 1
+        }
+      }
+    }
+  
+    if(name === 3 ) {
+      if (index >= this.state.pants.length) {
+        this.setState {
+          pantsIndex: 0
+        }
+      } else {
+        this.setState{
+          pantsIndex : this.state.pantsIndex + 1
+        }
+      }
+    }
+    if(name === 4 ) {
+      if (index >= this.state.shoes.length) {
+        this.setState {
+          shoeIndex: 0
+        }
+      } else {
+        this.setState{
+          shoeIndex : this.state.shoeIndex + 1
+        }
+      }
+    }
+    if(name === 4 ) {
+      if (index >= this.state.watches.length) {
+        this.setState {
+          watchIndex: 0
+        }
+      } else {
+        this.setState{
+          watchIndex : this.state.watchIndex + 1
+        }
+      }
+    }
+  }
+  
+    slideClickDown(index, name) {
+    if(name === 1 ) {
+      if (index < 1) {
+        this.setState {
+          beltIndex: this.state.beltIndex.length - 1 
+        }
+      } else {
+        this.setState{
+          beltIndex : this.state.beltIndex - 1
+        }
+      }
+    }
+    if(name === 2 ) {
+      if (index < 1) {
+        this.setState {
+          shirtIndex: this.state.shirtIndex.length - 1 
+        }
+      } else {
+        this.setState{
+          shirtIndex : this.state.shirtIndex - 1
+        }
+      }
+    }
+  
+    if(name === 3 ) {
+      if (index < 1) {
+        this.setState {
+          pantsIndex: this.state.pantsIndex.length - 1 
+        }
+      } else {
+        this.setState{
+          pantsIndex : this.state.pantsIndex - 1
+        }
+      }
+    }
+    if(name === 4 ) {
+      if (index < 1) {
+        this.setState {
+          shoeIndex: this.state.shoes.length - 1
+        }
+      } else {
+        this.setState{
+          shoeIndex : this.state.shoeIndex - 1
+        }
+      }
+    }
+    if(name === 4 ) {
+      if (index < 1) {
+        this.setState {
+          watchIndex: this.state.watches.length - 1,
+        }
+      } else {
+        this.setState{
+          watchIndex : this.state.watchIndex - 1
+        }
+      }
+    }
   }
   
   getRandomIntInclusive(min, max) {
@@ -141,11 +262,11 @@ class OutfitGenerator extends React.Component {
           <h5 style={{fontSize:"8", fontStyle:"lato", fontWeight:"normal"}}>{styleDescription}</h5> 
         </div>
         <div className="rotator">
-          <BeltRotator className="accessory" outfits={this.state.belts} beltIndex={this.state.beltIndex}/>
-          <ShirtRotator outfits={this.state.shirts} shirtIndex={this.state.shirtIndex}/>
-          <PantsRotator outfits={this.state.pants} pantsIndex={this.state.pantsIndex}/>
-          <ShoeRotator className="accessory" outfits={this.state.shoes} shoeIndex={this.state.shoeIndex}/>
-          <WatchRotator className="accessory" outfits={this.state.watches} watchIndex={this.state.watchIndex}/>
+          <BeltRotator className="accessory" outfits={this.state.belts} index={this.state.beltIndex} name={1} slideClickUp={this.slideClickUp} slideClickDown={this.slideClickDown}/>
+          <ShirtRotator outfits={this.state.shirts} index={this.state.shirtIndex} name={2} slideClickUp={this.slideClickUp} slideClickDown={this.slideClickDown}/>
+          <PantsRotator outfits={this.state.pants} index={this.state.pantsIndex} name={3} slideClickUp={this.slideClickUp} slideClickDown={this.slideClickDown}/>
+          <ShoeRotator className="accessory" outfits={this.state.shoes} index={this.state.shoeIndex} name={4} slideClickUp={this.slideClickUp} slideClickDown={this.slideClickDown}/>
+          <WatchRotator className="accessory" outfits={this.state.watches} index={this.state.watchIndex} name={5} slideClickUp={this.slideClickUp} slideClickDown={this.slideClickDown}/>
         </div>
       </div>
     )

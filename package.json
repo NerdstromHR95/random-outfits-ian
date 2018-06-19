@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack -p",
-    "start": "nodemon ./server/index.js",
+    "build": "webpack -w",
+    "start": "node ./server/index.js",
     "lint": "./node_modules/.bin/eslint ."
   },
   "dependencies": {

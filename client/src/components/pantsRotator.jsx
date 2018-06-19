@@ -15,7 +15,7 @@ const PantsRotator = (props) => (
         </div>
   ) : (
       <div>          
-       <SimpleSlider id="pants" outfits={props.outfits}/>
+       <SimpleSlider id="pants" outfits={props.outfits} name={props.name} slideClickUp={props.slideClickUp} slideClickDown={props.slideClickDown} index={props.index}/>
       </div>
   )
 )}
